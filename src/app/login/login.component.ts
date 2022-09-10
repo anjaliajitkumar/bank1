@@ -42,13 +42,36 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login(){
+ // login(){
     //fetch acno
-    var acno = this.acno
-    console.log(acno);
+ //   var acno = this.acno
+ //   console.log(acno);
     //fetch pswd
-    var pswd = this.pswd
-    console.log(pswd);
+  //  var pswd = this.pswd
+  //  console.log(pswd);
+
+  //  let userDetails = this.database
+  //  if(acno in userDetails){
+  //    if(pswd == userDetails[acno]['password']){
+   //     alert('LOGIN SUCCESSFUL')
+   //   }
+   //   else{
+    //    alert('INCORRECT PASSWORD')
+    //  }
+  //  }
+  //  else{
+  //    alert('USER DOES NOT EXIST')
+ //   }
+
+ // }
+
+  login(a:any,p:any){
+    console.log(a);
+    
+    //fetch acno
+    var acno = a.value
+    //fetch pswd
+    var pswd = p.value
 
     let userDetails = this.database
     if(acno in userDetails){
@@ -62,10 +85,6 @@ export class LoginComponent implements OnInit {
     else{
       alert('USER DOES NOT EXIST')
     }
-
-
-    
-    
   }
 
 }
